@@ -9,7 +9,7 @@
 #import "JWSearchResultsController.h"
 #import "Product.h"
 
-//#error Assign the JWSearchResultsVCIdentifier & JWSearchResultsCellIdentifier into the storyboard, and remove this..
+#error Assign the JWSearchResultsVCIdentifier & JWSearchResultsCellIdentifier into the storyboard, and remove this..
 NSString *const JWSearchResultsVCIdentifier = @"JWSearchResultsVCIdentifier";
 NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
 
@@ -32,6 +32,7 @@ NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
 - (void)setFilterString:(NSString *)filterString {
     _filterString = filterString;
     
+#warning Make your filtering strategy
     self.visibleResults = [self.allResults mutableCopy];
     if (!filterString || filterString.length <= 0) {
         return;
@@ -70,7 +71,8 @@ NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWSearchResultsCellIdentifier forIndexPath:indexPath];
-    
+
+#warning Refresh cells by your way
     Product *product;
     product = [self.visibleResults objectAtIndex:indexPath.row];
     
