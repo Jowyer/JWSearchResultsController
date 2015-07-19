@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FEC8F76C1B5B17A000FEDD11 /* JWSearchKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8F76B1B5B17A000FEDD11 /* JWSearchKeyword.m */; };
+		FEC8F76F1B5B237800FEDD11 /* CollectionSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8F76E1B5B237800FEDD11 /* CollectionSegueViewController.m */; };
 		FEDA247619FFF07200A219B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA247519FFF07200A219B9 /* main.m */; };
 		FEDA247919FFF07200A219B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA247819FFF07200A219B9 /* AppDelegate.m */; };
 		FEDA247C19FFF07200A219B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA247B19FFF07200A219B9 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* Begin PBXFileReference section */
 		FEC8F76A1B5B17A000FEDD11 /* JWSearchKeyword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchKeyword.h; sourceTree = "<group>"; };
 		FEC8F76B1B5B17A000FEDD11 /* JWSearchKeyword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchKeyword.m; sourceTree = "<group>"; };
+		FEC8F76D1B5B237800FEDD11 /* CollectionSegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionSegueViewController.h; sourceTree = "<group>"; };
+		FEC8F76E1B5B237800FEDD11 /* CollectionSegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionSegueViewController.m; sourceTree = "<group>"; };
 		FEDA247019FFF07200A219B9 /* JWSearchResultsController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSearchResultsController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDA247419FFF07200A219B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEDA247519FFF07200A219B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -155,6 +158,8 @@
 				FEDA24A619FFF8E200A219B9 /* TableSegueViewController.m */,
 				FEDA24A219FFF8C600A219B9 /* NavigatorSegueViewController.h */,
 				FEDA24A319FFF8C600A219B9 /* NavigatorSegueViewController.m */,
+				FEC8F76D1B5B237800FEDD11 /* CollectionSegueViewController.h */,
+				FEC8F76E1B5B237800FEDD11 /* CollectionSegueViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				FEDA24A719FFF8E200A219B9 /* TableSegueViewController.m in Sources */,
 				FEDA247C19FFF07200A219B9 /* ViewController.m in Sources */,
 				FEDA24A119FFF89900A219B9 /* ButtonSegueViewController.m in Sources */,
+				FEC8F76F1B5B237800FEDD11 /* CollectionSegueViewController.m in Sources */,
 				FEC8F76C1B5B17A000FEDD11 /* JWSearchKeyword.m in Sources */,
 				FEDA24B41A00E6BB00A219B9 /* JWSearchResultsController.m in Sources */,
 				FEDA24A419FFF8C600A219B9 /* NavigatorSegueViewController.m in Sources */,

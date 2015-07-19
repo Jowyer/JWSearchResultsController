@@ -28,7 +28,7 @@
 #pragma mark- UITableView Datasource & Delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -50,6 +50,9 @@
         case 2:
             [self performSegueWithIdentifier:@"NavigatorSegue" sender:nil];
             break;
+        case 3:
+            [self performSegueWithIdentifier:@"CollectionSegue" sender:nil];
+            break;
             
         default:
             break;
@@ -68,6 +71,9 @@
             break;
         case 2:
             cell.textLabel.text = @"Search Bar in Navigator";
+            break;
+        case 3:
+            cell.textLabel.text = @"Search Bar in CollectionView";
             break;
             
         default:

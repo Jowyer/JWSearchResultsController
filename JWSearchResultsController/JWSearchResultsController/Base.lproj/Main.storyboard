@@ -47,11 +47,12 @@
                         <segue destination="C8N-13-8Vf" kind="show" identifier="ButtonSegue" id="zSs-da-Ygs"/>
                         <segue destination="haq-rk-Txl" kind="show" identifier="TableSegue" id="958-KD-CdA"/>
                         <segue destination="w4P-UL-qG2" kind="show" identifier="NavigatorSegue" id="M2I-TS-7rE"/>
+                        <segue destination="rca-Ie-qPZ" kind="show" identifier="CollectionSegue" id="zNg-h8-CpT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="316"/>
+            <point key="canvasLocation" x="1029" y="-377"/>
         </scene>
         <!--Search Results Controller-->
         <scene sceneID="njR-JU-GjO">
@@ -77,7 +78,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCZ-bE-YQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1791" y="316"/>
+            <point key="canvasLocation" x="1815" y="-377"/>
         </scene>
         <!--Button Segue View Controller-->
         <scene sceneID="Pks-CP-kJs">
@@ -114,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osf-hj-3Z3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="405" y="1015"/>
+            <point key="canvasLocation" x="145" y="1015"/>
         </scene>
         <!--Table Segue View Controller-->
         <scene sceneID="T2w-d4-CFP">
@@ -140,7 +141,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyR-ef-eM7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="1015"/>
+            <point key="canvasLocation" x="921" y="1015"/>
         </scene>
         <!--Navigator Segue View Controller-->
         <scene sceneID="kYV-Ta-ycR">
@@ -158,7 +159,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfV-rT-7jG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="1015"/>
+            <point key="canvasLocation" x="1660" y="1015"/>
+        </scene>
+        <!--Collection Segue View Controller-->
+        <scene sceneID="ZFZ-Gp-Oda">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="rca-Ie-qPZ" customClass="CollectionSegueViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N3d-1M-i00"/>
+                        <viewControllerLayoutGuide type="bottom" id="YwU-re-0xi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p7Q-Ex-v6Q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CwM-7D-1hU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mKt-nI-WN3">
+                                    <size key="itemSize" width="150" height="120"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="SZ1-iB-AaA">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionHeaderView" id="1bb-dx-r2a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="rca-Ie-qPZ" id="WiE-Yz-yWm"/>
+                                    <outlet property="delegate" destination="rca-Ie-qPZ" id="3pb-7k-RAM"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CwM-7D-1hU" secondAttribute="trailing" id="1q8-X5-tmb"/>
+                            <constraint firstItem="CwM-7D-1hU" firstAttribute="leading" secondItem="p7Q-Ex-v6Q" secondAttribute="leading" id="7W2-bP-JlV"/>
+                            <constraint firstAttribute="bottom" secondItem="CwM-7D-1hU" secondAttribute="bottom" id="eP9-RY-VG9"/>
+                            <constraint firstItem="CwM-7D-1hU" firstAttribute="top" secondItem="N3d-1M-i00" secondAttribute="bottom" id="mMd-66-vL9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="CwM-7D-1hU" id="Ucl-bv-9Qb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vz5-cz-rAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2380" y="1015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1T9-xn-JtY">
