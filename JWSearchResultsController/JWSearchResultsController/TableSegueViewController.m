@@ -7,7 +7,7 @@
 //
 
 #import "TableSegueViewController.h"
-#import "Product.h"
+#import "JWSearchKeyword.h"
 #import "JWSearchResultsController.h"
 
 @interface TableSegueViewController () <UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
@@ -20,19 +20,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Table";
+    
     JWSearchResultsController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:JWSearchResultsVCIdentifier];
-    searchResultsController.allResults = [Product allProducts];
+    searchResultsController.allResults = [JWSearchKeyword allKeywords];
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
     
     self.searchController.delegate = self;
-    
     self.searchController.searchResultsUpdater = self;
     
     self.searchController.searchBar.delegate = self;
-    self.searchController.searchBar.scopeButtonTitles = @[@"All", ProductTypeMobile, ProductTypeDesktop, ProductTypePortable];
+    self.searchController.searchBar.scopeButtonTitles = @[@"All", KeywordCategoryShopping, KeywordCategoryRestaurant, KeywordCategoryMovie];
     
-//    self.searchController.hidesNavigationBarDuringPresentation = NO;
     self.tableView.tableHeaderView = self.searchController.searchBar;
     
     self.definesPresentationContext = YES;

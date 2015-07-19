@@ -7,7 +7,7 @@
 //
 
 #import "NavigatorSegueViewController.h"
-#import "Product.h"
+#import "JWSearchKeyword.h"
 #import "JWSearchResultsController.h"
 
 @interface NavigatorSegueViewController () <UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
@@ -20,17 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"Navigator";
+    
     JWSearchResultsController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:JWSearchResultsVCIdentifier];
-    searchResultsController.allResults = [Product allProducts];
+    searchResultsController.allResults = [JWSearchKeyword allKeywords];
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
     
     self.searchController.delegate = self;
-    
     self.searchController.searchResultsUpdater = self;
     
     self.searchController.searchBar.delegate = self;
-//    self.searchController.searchBar.scopeButtonTitles = @[@"All", ProductTypeMobile, ProductTypeDesktop, ProductTypePortable];
     self.searchController.searchBar.searchBarStyle = UISearchBarStyleMinimal;
     
     self.searchController.hidesNavigationBarDuringPresentation = NO;

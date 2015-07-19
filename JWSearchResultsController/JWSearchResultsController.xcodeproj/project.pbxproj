@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEC8F76C1B5B17A000FEDD11 /* JWSearchKeyword.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC8F76B1B5B17A000FEDD11 /* JWSearchKeyword.m */; };
 		FEDA247619FFF07200A219B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA247519FFF07200A219B9 /* main.m */; };
 		FEDA247919FFF07200A219B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA247819FFF07200A219B9 /* AppDelegate.m */; };
 		FEDA247C19FFF07200A219B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA247B19FFF07200A219B9 /* ViewController.m */; };
@@ -14,7 +15,6 @@
 		FEDA248119FFF07200A219B9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDA248019FFF07200A219B9 /* Images.xcassets */; };
 		FEDA248419FFF07200A219B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDA248219FFF07200A219B9 /* LaunchScreen.xib */; };
 		FEDA249019FFF07200A219B9 /* JWSearchResultsControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA248F19FFF07200A219B9 /* JWSearchResultsControllerTests.m */; };
-		FEDA249E19FFF10400A219B9 /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA249D19FFF10400A219B9 /* Product.m */; };
 		FEDA24A119FFF89900A219B9 /* ButtonSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA24A019FFF89900A219B9 /* ButtonSegueViewController.m */; };
 		FEDA24A419FFF8C600A219B9 /* NavigatorSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA24A319FFF8C600A219B9 /* NavigatorSegueViewController.m */; };
 		FEDA24A719FFF8E200A219B9 /* TableSegueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEDA24A619FFF8E200A219B9 /* TableSegueViewController.m */; };
@@ -32,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FEC8F76A1B5B17A000FEDD11 /* JWSearchKeyword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSearchKeyword.h; sourceTree = "<group>"; };
+		FEC8F76B1B5B17A000FEDD11 /* JWSearchKeyword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSearchKeyword.m; sourceTree = "<group>"; };
 		FEDA247019FFF07200A219B9 /* JWSearchResultsController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWSearchResultsController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDA247419FFF07200A219B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEDA247519FFF07200A219B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,8 +47,6 @@
 		FEDA248919FFF07200A219B9 /* JWSearchResultsControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWSearchResultsControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDA248E19FFF07200A219B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEDA248F19FFF07200A219B9 /* JWSearchResultsControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWSearchResultsControllerTests.m; sourceTree = "<group>"; };
-		FEDA249C19FFF10400A219B9 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
-		FEDA249D19FFF10400A219B9 /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		FEDA249F19FFF89900A219B9 /* ButtonSegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonSegueViewController.h; sourceTree = "<group>"; };
 		FEDA24A019FFF89900A219B9 /* ButtonSegueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonSegueViewController.m; sourceTree = "<group>"; };
 		FEDA24A219FFF8C600A219B9 /* NavigatorSegueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigatorSegueViewController.h; sourceTree = "<group>"; };
@@ -140,8 +140,8 @@
 		FEDA24AB1A00E63C00A219B9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FEDA249C19FFF10400A219B9 /* Product.h */,
-				FEDA249D19FFF10400A219B9 /* Product.m */,
+				FEC8F76A1B5B17A000FEDD11 /* JWSearchKeyword.h */,
+				FEC8F76B1B5B17A000FEDD11 /* JWSearchKeyword.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,9 +271,9 @@
 				FEDA24A719FFF8E200A219B9 /* TableSegueViewController.m in Sources */,
 				FEDA247C19FFF07200A219B9 /* ViewController.m in Sources */,
 				FEDA24A119FFF89900A219B9 /* ButtonSegueViewController.m in Sources */,
+				FEC8F76C1B5B17A000FEDD11 /* JWSearchKeyword.m in Sources */,
 				FEDA24B41A00E6BB00A219B9 /* JWSearchResultsController.m in Sources */,
 				FEDA24A419FFF8C600A219B9 /* NavigatorSegueViewController.m in Sources */,
-				FEDA249E19FFF10400A219B9 /* Product.m in Sources */,
 				FEDA247919FFF07200A219B9 /* AppDelegate.m in Sources */,
 				FEDA247619FFF07200A219B9 /* main.m in Sources */,
 			);
@@ -468,6 +468,7 @@
 				FEDA249519FFF07200A219B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEDA249619FFF07200A219B9 /* Build configuration list for PBXNativeTarget "JWSearchResultsControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +477,7 @@
 				FEDA249819FFF07200A219B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

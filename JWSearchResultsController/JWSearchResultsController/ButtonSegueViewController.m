@@ -7,7 +7,7 @@
 //
 
 #import "ButtonSegueViewController.h"
-#import "Product.h"
+#import "JWSearchKeyword.h"
 #import "JWSearchResultsController.h"
 
 @interface ButtonSegueViewController () <UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate>
@@ -18,22 +18,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Button";
 }
 
 - (IBAction)searchButtonTapped:(id)sender {
     JWSearchResultsController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:JWSearchResultsVCIdentifier];
-    searchResultsController.allResults = [Product allProducts];
+    searchResultsController.allResults = [JWSearchKeyword allKeywords];
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
     
     self.searchController.delegate = self;
-    
     self.searchController.searchResultsUpdater = self;
     
     self.searchController.searchBar.delegate = self;
-    self.searchController.searchBar.scopeButtonTitles = @[@"All", ProductTypeMobile, ProductTypeDesktop, ProductTypePortable];
+    self.searchController.searchBar.scopeButtonTitles = @[@"All", KeywordCategoryShopping, KeywordCategoryRestaurant, KeywordCategoryMovie];
     
-    self.searchController.hidesNavigationBarDuringPresentation = NO;
+    self.searchController.hidesNavigationBarDuringPresentation = YES;
     [self presentViewController:self.searchController animated:YES completion:nil];
 }
 

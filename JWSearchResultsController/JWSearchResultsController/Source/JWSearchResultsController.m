@@ -7,8 +7,7 @@
 //
 
 #import "JWSearchResultsController.h"
-#import "Product.h"
-
+#import "JWSearchKeyword.h"
 #error Assign the JWSearchResultsVCIdentifier & JWSearchResultsCellIdentifier into the storyboard, and remove this..
 NSString *const JWSearchResultsVCIdentifier = @"JWSearchResultsVCIdentifier";
 NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
@@ -31,9 +30,10 @@ NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
 #pragma mark - Property Overrides & Filter Strategy
 - (void)setFilterString:(NSString *)filterString {
     _filterString = filterString;
+    self.visibleResults = [self.allResults mutableCopy];
     
 #warning Make your filtering strategy
-    self.visibleResults = [self.allResults mutableCopy];
+    // By Name
     if (!filterString || filterString.length <= 0) {
         return;
     }
@@ -42,19 +42,19 @@ NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
         [self.visibleResults filterUsingPredicate:[namePredicate predicateWithSubstitutionVariables:@{@"nameString":filterString}]];
     }
     
-    NSPredicate *typePredicate = [NSPredicate predicateWithFormat:@"type CONTAINS [c] $typeString"];
-    
+    // By Category
+    NSPredicate *categoryPredicate = [NSPredicate predicateWithFormat:@"category CONTAINS [c] $categoryString"];
     switch (self.searchBarScopeIndex) {
         case 0:
             break;
         case 1:
-            [self.visibleResults filterUsingPredicate:[typePredicate predicateWithSubstitutionVariables:@{@"typeString":ProductTypeMobile}]];
+            [self.visibleResults filterUsingPredicate:[categoryPredicate predicateWithSubstitutionVariables:@{@"categoryString":KeywordCategoryShopping}]];
             break;
         case 2:
-            [self.visibleResults filterUsingPredicate:[typePredicate predicateWithSubstitutionVariables:@{@"typeString":ProductTypeDesktop}]];
+            [self.visibleResults filterUsingPredicate:[categoryPredicate predicateWithSubstitutionVariables:@{@"categoryString":KeywordCategoryRestaurant}]];
             break;
         case 3:
-            [self.visibleResults filterUsingPredicate:[typePredicate predicateWithSubstitutionVariables:@{@"typeString":ProductTypePortable}]];
+            [self.visibleResults filterUsingPredicate:[categoryPredicate predicateWithSubstitutionVariables:@{@"categoryString":KeywordCategoryMovie}]];
             break;
             
         default:
@@ -73,10 +73,8 @@ NSString *const JWSearchResultsCellIdentifier = @"JWSearchResultsCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JWSearchResultsCellIdentifier forIndexPath:indexPath];
 
 #warning Refresh cells by your way
-    Product *product;
-    product = [self.visibleResults objectAtIndex:indexPath.row];
-    
-    cell.textLabel.text = product.name;
+    JWSearchKeyword *keyword = [self.visibleResults objectAtIndex:indexPath.row];
+    cell.textLabel.text = keyword.name;
     return cell;
 }
 
