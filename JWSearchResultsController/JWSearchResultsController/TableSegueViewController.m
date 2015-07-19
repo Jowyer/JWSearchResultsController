@@ -34,6 +34,7 @@
     self.searchController.searchBar.scopeButtonTitles = @[@"All", KeywordCategoryShopping, KeywordCategoryRestaurant, KeywordCategoryMovie];
     
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.tableView.contentOffset = CGPointMake(0, self.searchController.searchBar.frame.size.height);
     
     self.definesPresentationContext = YES;
 }
